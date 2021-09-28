@@ -1,0 +1,70 @@
+# TOKENS
+
+ID			|   auto_increment
+____________|__________________________
+NOME 		|   varchar(50)
+____________|__________________________
+TOKEN 		|   varchar(50)
+____________|__________________________
+EXTRA 		|   varhcar(100)
+____________|__________________________
+QTD 		|   int(8)
+____________|__________________________
+TIPO 		|   int(4)
+____________|__________________________
+STATUS 		|   int(2)
+____________|__________________________
+
+
+
+# TIPOS
+
+ID 			|   auto_increment
+____________|__________________________
+TITULO 		|   varchar(50)
+____________|__________________________
+COMENTARIO 	|   varchar(300)
+____________|__________________________
+STATUS 		|   int(2)
+____________|__________________________
+
+
+
+
+# REGISTROS
+
+ID 			|   auto_increment
+____________|__________________________
+TOKEN_ID 	|   int(5)
+____________|__________________________
+TIPO 		|   int(4)
+____________|__________________________
+DATAHORA 	|   datetime
+____________|__________________________
+DESCRICAO 	|   varchar(500)
+____________|__________________________
+STATUS 		|   int(2)
+____________|__________________________
+
+
+
+
+
+
+
+
+
+# SQL COMMANDS
+
+
+create table tokens(id int(5) auto_increment not null, nome varchar(50) not null, token varchar(100) not null, extra varchar(100) not null, qtd int(8) not null, tipo int(4) not null, status int(2) not null, primary key(id));
+
+
+
+
+ create table tipos(id int(4) auto_increment not null, titulo varchar(50) not null, comentario varchar(300), status int(2) not null, primary key(id));
+
+
+
+
+create table registros(id int(12) auto_increment not null, token_id int(5) not null, tipo int(4) not null, data_hora datetime not null, descricao varchar(500) not null, status int(2) not null, primary key(id));
